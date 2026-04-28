@@ -1,0 +1,121 @@
+body {
+  padding-top: 40px;
+}
+
+/* ===== FIX MEGA MENU BOOTSTRAP ===== */
+.dropdown-menu {
+  border: none;
+  border-radius: 10px;
+  background: rgba(17, 17, 17, 0.95);
+  color: white;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background: var(--color-principal);
+}
+
+.dropdown-menu h6 {
+  color: var(--color-secundario);
+}
+
+/* Mega menú ancho */
+.navbar .dropdown-menu {
+  width: 700px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/** HERO (video principal)*/
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*? Video ocupa toda la pantalla */
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*? Capa oscura encima del video */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*? Texto centrado */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+/*? Título animado */
+.overlay h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.destino-card {
+  transition: 0.3s;
+}
+.destino-card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FIX ALTURA CARRUSEL ===== */
+
+.carousel-fixed {
+  height: 350px; /* podés ajustar (350–450 según gusto) */
+}
+
+.carousel-fixed .carousel-item {
+  height: 100%;
+}
+
+.carousel-fixed .card {
+  height: 260px; /* mantiene uniformidad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** Redes sociales */
+
+.social-icons a {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-6px) scale(1.2);
+}
+
+.facebook:hover {
+  color: #1877f2;
+}
+
+.instagram:hover {
+  color: #e1306c;
+}
+
+.twitter:hover {
+  color: #000000;
+}
+
+.youtube:hover {
+  color: #ff0000;
+}
