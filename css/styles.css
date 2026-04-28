@@ -461,3 +461,96 @@ body {
 .modal.show .modal-dialog {
   transform: scale(1);
 }
+
+/* ===== ESTILOS PARA PRECIOS ===== */
+
+/* Tabla comparativa */
+#tablaPrecios {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#tablaPrecios thead th {
+  font-size: 1.1rem;
+  padding: 20px 10px;
+  vertical-align: middle;
+}
+
+#tablaPrecios tbody td {
+  vertical-align: middle;
+  padding: 15px 10px;
+}
+
+/* Efecto de columna resaltada */
+.columna-resaltada {
+  background-color: rgba(13, 110, 253, 0.12) !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Precios animados */
+.precio {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Planes específicos */
+.plan-basico {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.plan-estandar {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.plan-premium {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Badges dentro de la tabla */
+#tablaPrecios .badge {
+  font-size: 0.7rem;
+  padding: 5px 8px;
+}
+
+/* Iconos en la tabla */
+#tablaPrecios i {
+  font-size: 1.2rem;
+}
+
+/* Animación de hover en tarjetas */
+.card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Botón de selección */
+.seleccionar-plan {
+  transition: all 0.2s ease;
+}
+
+.seleccionar-plan:active {
+  transform: scale(0.95);
+}
+
+/* Responsive: ajustes en mobile */
+@media (max-width: 768px) {
+  #tablaPrecios {
+    font-size: 0.8rem;
+  }
+
+  #tablaPrecios thead th {
+    font-size: 0.9rem;
+    padding: 10px 5px;
+  }
+
+  .precio {
+    font-size: 1rem;
+  }
+
+  #tablaPrecios .badge {
+    font-size: 0.6rem;
+  }
+}
