@@ -341,7 +341,8 @@ body {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -357,7 +358,8 @@ body {
   transform: rotateY(180deg);
 }
 
-.flip-card-front .card, .flip-card-back .card {
+.flip-card-front .card,
+.flip-card-back .card {
   height: 100%;
   border-radius: 15px;
 }
@@ -388,11 +390,74 @@ body {
 
 /* Animación de calificación */
 @keyframes starPop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .rating-container .stars i.bi-star-fill {
   animation: starPop 0.3s ease;
+}
+
+/* ===== ESTILOS PARA CONTACTO ===== */
+
+/* Efecto hover en tarjeta de contacto */
+.card.shadow-lg {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card.shadow-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilos de validación personalizados */
+.is-valid {
+  border-color: #198754 !important;
+  background-image: none !important;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-image: none !important;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  font-size: 0.8rem;
+}
+
+/* Contador de caracteres */
+#contadorCaracteres {
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+/* Animación del botón de envío */
+#btnEnviar:active {
+  transform: scale(0.98);
+}
+
+/* Checkbox personalizado */
+.form-check-input:checked {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+/* Modal de confirmación animado */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
 }
