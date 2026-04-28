@@ -4,6 +4,156 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boostrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Turismo NOA</a>
+
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+
+              <!-- Dropdown tipo mega -->
+              <li class="nav-item d-flex align-items-center">
+                <div class="btn-group">
+                  <!-- BOTÓN PRINCIPAL (VA A LA PÁGINA) -->
+                  <a href="./views/destinos.html" class="btn btn-outline-light">
+                    Destinos
+                  </a>
+
+                  <!-- BOTÓN FLECHA (FILTROS) -->
+                  <button
+                    type="button"
+                    class="btn btn-outline-light dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+
+                  <!-- OPCIONES -->
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a class="dropdown-item" href="destinos.html?cat=all"
+                        >Todos</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="destinos.html?cat=cultural"
+                        >Cultural</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="destinos.html?cat=naturaleza"
+                        >Naturaleza</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="destinos.html?cat=playa"
+                        >Playa</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="destinos.html?cat=gastro"
+                        >Gastronómico</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="agencias.html">Agencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="precios.html">Precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <footer class="bg-dark text-white pt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Form -->
+          <div class="col-md-4">
+            <h5>Suscribite</h5>
+            <form>
+              <input
+                class="form-control mb-2"
+                type="email"
+                placeholder="Email"
+              />
+              <button class="btn btn-warning w-100">Suscribirse</button>
+            </form>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <h5>Seguinos</h5>
+
+            <div
+              class="d-flex justify-content-center gap-4 fs-3 mt-3 social-icons"
+            >
+              <a href="https://www.facebook.com/" class="icon facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/" class="icon instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://x.com/" class="icon twitter"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="https://www.youtube.com/" class="icon youtube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col-md-4">
+            <iframe
+              class="w-100 rounded"
+              src="https://www.google.com/maps?q=jujuy&output=embed"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 pb-3">© 2026 Turismo NOA</div>
+      </div>
+    </footer>
+  </body>
 </html>
