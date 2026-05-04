@@ -1,8 +1,6 @@
 console.log("Contacto.js cargado");
 
 $(document).ready(function () {
-  // ========== 1. VALIDACIÓN EN TIEMPO REAL ==========
-
   // Función de sanitización básica (previene XSS)
   function sanitizar(texto) {
     return texto
@@ -43,7 +41,7 @@ $(document).ready(function () {
     verificarFormularioCompleto();
   });
 
-  // Validar teléfono (opcional)
+  // Validar teléfono
   $("#telefono").on("input", function () {
     let valor = $(this)
       .val()
