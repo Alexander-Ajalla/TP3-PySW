@@ -621,3 +621,71 @@ body {
   object-fit: cover;
   background-color: #e9ecef;
 }
+
+/* ===== MÓDULO PHISHING ===== */
+
+#btnSimularPhishing {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#btnSimularPhishing:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3);
+}
+
+.form-check {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.form-check:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.form-check.border-success {
+  border-left: 4px solid #198754 !important;
+  background-color: rgba(25, 135, 84, 0.05);
+}
+
+.form-check.border-danger {
+  border-left: 4px solid #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* Animación de pulso para feedback */
+.pulse-animation {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Confeti animado */
+.confeti {
+  position: fixed;
+  animation: confetiFall 2s ease-in-out forwards;
+}
+
+@keyframes confetiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

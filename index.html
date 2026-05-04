@@ -397,6 +397,61 @@
       </div>
     </section>
 
+    <!-- SECCIÓN MÓDULO PHISHING - SIMULACIÓN EDUCATIVA -->
+    <section class="container py-5 border-top" id="moduloPhishing">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="text-center mb-4">
+            <h2 class="display-6 fw-bold">
+              <i class="bi bi-shield-shaded text-danger"></i>
+              ¿Sabés identificar un intento de phishing?
+            </h2>
+            <p class="lead text-muted">
+              Aprendé a proteger tus datos con nuestra simulación educativa
+            </p>
+          </div>
+
+          <div class="card shadow-lg border-0 overflow-hidden">
+            <div class="card-header bg-danger text-white py-3">
+              <h5 class="mb-0">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                Módulo Educativo: Phishing
+                <span class="badge bg-light text-dark ms-2">Simulación</span>
+              </h5>
+            </div>
+            <div class="card-body p-4">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <p class="mb-3">
+                    El <strong>phishing</strong> es una técnica de estafa que
+                    busca engañarte para que entregues información personal como
+                    contraseñas, datos bancarios o credenciales.
+                  </p>
+                  <div class="alert alert-warning">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>⚠️ Importante:</strong> Esta es una
+                    <strong>simulación educativa</strong>. No se recolectan
+                    datos reales.
+                  </div>
+                  <button class="btn btn-danger btn-lg" id="btnSimularPhishing">
+                    <i class="bi bi-envelope-exclamation"></i>
+                    Simulación de Phishing
+                  </button>
+                </div>
+                <div class="col-md-5 text-center">
+                  <img
+                    src="https://img.icons8.com/color/240/security-checked--v1.png"
+                    alt="Seguridad"
+                    style="max-width: 150px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="bg-dark text-white pt-5">
       <div class="container">
         <div class="row">
@@ -447,7 +502,195 @@
         <div class="text-center mt-4 pb-3">© 2026 Turismo NOA</div>
       </div>
     </footer>
+    <!-- MODAL SIMULACIÓN DE PHISHING -->
+    <div
+      class="modal fade"
+      id="modalPhishing"
+      data-bs-backdrop="static"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">
+              <i class="bi bi-envelope-exclamation-fill me-2"></i>
+              Simulación de Phishing
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- EJEMPLO DE EMAIL FALSO -->
+            <div class="card mb-4 border-warning">
+              <div class="card-header bg-warning text-dark">
+                <i class="bi bi-envelope"></i> Email sospechoso
+              </div>
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <strong>De:</strong>
+                  <span class="text-danger"
+                    >soporte@turismo-seguro-falso.com</span
+                  >
+                  <span class="badge bg-danger">⚠️ Dominio sospechoso</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <strong>Para:</strong> <span>usuario@ejemplo.com</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <strong>Asunto:</strong>
+                  <span class="text-warning"
+                    >❗URGENTE: Tu cuenta ha sido suspendida</span
+                  >
+                </div>
+                <div class="border p-3 bg-light rounded">
+                  <p class="mb-2">Estimado cliente,</p>
+                  <p class="mb-2">
+                    Hemos detectado actividad sospechosa en tu cuenta.
+                    <strong class="text-danger"
+                      >Haz click aquí para verificar tus datos</strong
+                    >
+                    y evitar la suspensión permanente de tu cuenta.
+                  </p>
+                  <p class="mb-0 text-muted small">
+                    Saludos,<br />Equipo de Seguridad
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <!-- PREGUNTA PARA EL USUARIO -->
+            <div class="card mb-4 border-primary">
+              <div class="card-header bg-primary text-white">
+                <i class="bi bi-question-circle"></i> ¿Qué señales de phishing
+                identificás?
+              </div>
+              <div class="card-body">
+                <p class="mb-3">Seleccioná las opciones correctas:</p>
+
+                <div class="form-check mb-2" id="opcion1">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="url"
+                    id="checkUrl"
+                  />
+                  <label class="form-check-label" for="checkUrl">
+                    El dominio del remitente no coincide con la empresa oficial
+                  </label>
+                </div>
+
+                <div class="form-check mb-2" id="opcion2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="urgencia"
+                    id="checkUrgencia"
+                  />
+                  <label class="form-check-label" for="checkUrgencia">
+                    El mensaje crea una falsa sensación de urgencia
+                  </label>
+                </div>
+
+                <div class="form-check mb-2" id="opcion3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="link"
+                    id="checkLink"
+                  />
+                  <label class="form-check-label" for="checkLink">
+                    Contiene un enlace sospechoso (pedir datos)
+                  </label>
+                </div>
+
+                <div class="form-check mb-2" id="opcion4">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="saludo"
+                    id="checkSaludo"
+                  />
+                  <label class="form-check-label" for="checkSaludo">
+                    El saludo es genérico ("Estimado cliente")
+                  </label>
+                </div>
+
+                <div id="feedbackPhishing" class="mt-3"></div>
+              </div>
+            </div>
+
+            <!-- SEÑALES DE FRAUDE (educativo) -->
+            <div class="card border-success">
+              <div class="card-header bg-success text-white">
+                <i class="bi bi-lightbulb"></i> Señales de alerta - ¿Cómo
+                protegerte?
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="mb-0">
+                      <li>
+                        <i class="bi bi-x-circle text-danger"></i> Nunca hagas
+                        click en enlaces sospechosos
+                      </li>
+                      <li>
+                        <i class="bi bi-shield-check"></i> Verificá siempre el
+                        remitente
+                      </li>
+                      <li>
+                        <i class="bi bi-database"></i> No compartas contraseñas
+                        por email
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="mb-0">
+                      <li>
+                        <i class="bi bi-envelope"></i> Desconfiá de ofertas
+                        demasiado buenas
+                      </li>
+                      <li>
+                        <i class="bi bi-telephone"></i> Contactá directamente a
+                        la empresa
+                      </li>
+                      <li>
+                        <i class="bi bi-lock"></i> Usá autenticación de dos
+                        factores
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnVerificarPhishing"
+            >
+              <i class="bi bi-check-circle"></i> Verificar respuestas
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -473,5 +716,6 @@
         }
       }, 20);
     </script>
+    <script src="./js/phishing.js"></script>
   </body>
 </html>
